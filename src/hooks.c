@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 14:02:05 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 13:48:11 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 15:25:46 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void		controls(t_map *map)
 
 int			key_press(int key, t_map *map)
 {
+	int i;
+
+	i = 0;
 	if (key == PRESS_ESC)
-	{
-		free(map);
-		exit(0);
-	}
+		close_win(map);
 	if (key == ZOOM_IN || key == ZOOM_IN_KEYBRD || key == ZOOM_IN_MOUSE)
 		map->gap += 10;
 	if (key == ZOOM_OUT || key == ZOOM_OUT_KEYBRD || key == ZOOM_OUT_MOUSE)

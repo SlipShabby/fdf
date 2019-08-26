@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 23:13:11 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 00:27:00 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 15:19:24 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,25 @@ void				flatten(int key, t_map *map)
 				map->map_z_adj[a][b] *= 1.05;
 		}
 	}
+}
+
+int					close_win(void *prm)
+{
+	int			i;
+	t_map		*map;
+
+	i = -1;
+	map = prm;
+	while (++i < map->height)
+	{
+		free(map->map_z[i]);
+		free(map->map_z_adj[i]);
+		free(map->map_z_new[i]);
+	}
+	free(map->map_z);
+	free(map->map_z_adj);
+	free(map->map_z_new);
+	free(map);
+	exit(0);
+	return (0);
 }

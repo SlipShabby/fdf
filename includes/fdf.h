@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 14:59:17 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 11:35:32 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 15:17:11 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "../libft/libft.h"
 # include "../GNL/get_next_line.h"
-# include "../minilibx/mlx.h"
+# include "../minilibx_macos/mlx.h"
 
 # include <errno.h>
 # include <fcntl.h>
@@ -117,7 +117,6 @@ typedef struct			s_map
 	int					z_min;
 	int					z_max;
 	t_point				**map_z;
-	double				**map_z_prj;
 	double				**map_z_adj;
 	double				**map_z_new;
 	double				x1;
@@ -191,6 +190,7 @@ void					move(int key, t_map *map);
 void					rotate(int key, t_map *map);
 void					view(int key, t_map *map);
 void					flatten(int key, t_map *map);
+int						close_win(void *prm);
 void					draw_map(t_map *map);
 void					bresen(t_map *map);
 void					bresen_set(t_map *map);

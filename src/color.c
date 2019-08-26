@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 16:06:27 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 11:46:59 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 15:03:01 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ int		draw_colors(t_map *map, int i)
 	int		green;
 	int		blue;
 
-	// if (map->color_current == map->color_end)
-	// 	return (map->color_end);
 	if (map->delta_x > map->delta_y)
 		percentage = percent(map->x1, map->x2, map->x1 + i);
 	else
