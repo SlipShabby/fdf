@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 13:43:19 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 15:41:39 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 20:20:01 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void			get_z2(t_map *map, char **split, int i, int h)
 {
 	char **tmp;
 
-	
 	if (ft_strchr(split[i], ',') != NULL)
 	{
 		tmp = ft_strsplit(split[i], ',');

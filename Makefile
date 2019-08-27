@@ -6,13 +6,13 @@
 #    By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/25 17:50:25 by ajulanov          #+#    #+#              #
-#    Updated: 2019/08/26 11:19:41 by ajulanov         ###   ########.fr        #
+#    Updated: 2019/08/26 17:59:54 by ajulanov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
-CC = gcc #-g -fsanitize=address
+CC = gcc
 FLAGS = -Wall -Werror -Wextra -O3
 LIBRARIES = -lmlx -lm -lft -L$(LIBFT_DIRECTORY) -L$(MINILIBX_DIRECTORY) $(GNL) -framework OpenGL -framework AppKit
 INCLUDES = -I$(HEADERS_DIRECTORY) -I$(LIBFT_HEADERS) -I$(MINILIBX_HEADERS) -I$(GNL_HEADERS)

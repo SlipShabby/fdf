@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 03:45:15 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 15:41:58 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 20:19:00 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	get_xy(t_map *map)
 		}
 		check_first_line(map, count_width);
 		map->height++;
+		free(line);
 	}
 }
 
@@ -96,6 +97,6 @@ void	get_z1(t_map *map, char *line, char **split, int i)
 			free(split[i]);
 		free(split);
 		free(line);
-		get_extra(map);
 	}
+	get_extra(map);
 }

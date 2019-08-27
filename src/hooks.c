@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 14:02:05 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 15:25:46 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 20:24:00 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,14 @@ int			key_press(int key, t_map *map)
 	if (key == ZOOM_IN || key == ZOOM_IN_KEYBRD || key == ZOOM_IN_MOUSE)
 		map->gap += 10;
 	if (key == ZOOM_OUT || key == ZOOM_OUT_KEYBRD || key == ZOOM_OUT_MOUSE)
-	{
-		if (map->gap > 0)
-			map->gap -= map->gap / 2;
-	}
+		map->gap -= map->gap / 2;
 	if (key == 43 || key == 47)
 		flatten(key, map);
 	if (key == NUM_2 || key == NUM_8 || key == NUM_4 ||
 		key == NUM_6 || key == NUM_1 || key == NUM_7)
 		rotate(key, map);
 	if (key == MOVE_UP || key == MOVE_DOWN ||
-	key == MOVE_LEFT || key == MOVE_RIGHT)
+		key == MOVE_LEFT || key == MOVE_RIGHT)
 		move(key, map);
 	if (key == MAIN_R || key == MAIN_T)
 		view(key, map);
