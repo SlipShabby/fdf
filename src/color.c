@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 16:06:27 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 15:03:01 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 22:34:39 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,7 @@ int		draw_colors(t_map *map, int i)
 	int		green;
 	int		blue;
 
-	if (map->delta_x > map->delta_y)
-		percentage = percent(map->x1, map->x2, map->x1 + i);
-	else
-		percentage = percent(map->y1, map->y2, map->y1 + i);
+	percentage = percent(0, map->longest, i);
 	red = get_light((map->color_start >> 16) & 0xFF,
 					(map->color_end >> 16) & 0xFF, percentage);
 	green = get_light((map->color_start >> 8) & 0xFF,
@@ -65,21 +62,4 @@ int		draw_colors(t_map *map, int i)
 	blue = get_light(map->color_start & 0xFF, map->color_end & 0xFF,
 					percentage);
 	return ((red << 16) | (green << 8) | blue);
-}
-
-int		default_color(t_map *map)
-{
-	double percentage;
-
-	percentage = percent(map->z_min, map->z_max, map->map_z[map->y][map->x].z);
-	if (percentage < 0.2)
-		return (COLOR_DISCO);
-	else if (percentage < 0.4)
-		return (COLOR_BRICK_RED);
-	else if (percentage < 0.6)
-		return (COLOR_FLAMINGO);
-	else if (percentage < 0.8)
-		return (COLOR_JAFFA);
-	else
-		return (COLOR_SAFFRON);
 }

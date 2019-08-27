@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 19:41:40 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 20:17:25 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 22:33:00 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ int		main(int ac, char **av)
 		get_map(map, av[1]);
 		set_env(map);
 		draw_map(map);
-		system("leaks fdf");
 		mlx_loop(map->mlx);
 	}
 	else

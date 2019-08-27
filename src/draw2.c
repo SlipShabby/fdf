@@ -6,11 +6,12 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 13:52:57 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 11:35:07 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 22:30:46 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+#include <stdio.h>
 
 void		bresen_set(t_map *map)
 {
@@ -41,12 +42,12 @@ void		bresen_loop(t_map *map, int shortest, int longest)
 
 	i = -1;
 	numerator = 0;
-	numerator = longest >> 1;
+	numerator = longest;
 	map->longest = numerator;
 	while (++i <= longest)
 	{
-		mlx_pixel_put(map->mlx, map->win, map->x1, map->y1,\
-		draw_colors(map, i));
+		mlx_pixel_put(map->mlx, map->win, map->x1, map->y1,
+			draw_colors(map, i));
 		numerator += shortest;
 		if (!(numerator < longest))
 		{

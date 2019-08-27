@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 13:43:19 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 20:20:01 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 20:41:11 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void			get_z2(t_map *map, char **split, int i, int h)
 		map->map_z[h][i].color = ft_atoi_base(tmp[1] + 2, 16);
 		free(tmp[0]);
 		free(tmp[1]);
+		free(tmp);
 	}
 	else
 	{

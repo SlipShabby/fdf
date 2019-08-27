@@ -6,7 +6,7 @@
 /*   By: ajulanov <ajulanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 14:59:17 by ajulanov          #+#    #+#             */
-/*   Updated: 2019/08/26 15:17:11 by ajulanov         ###   ########.fr       */
+/*   Updated: 2019/08/26 22:35:21 by ajulanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,7 +199,6 @@ void					transform(t_map *map);
 void					get_colors(t_map *map);
 int						draw_colors(t_map *map, int i);
 void					print_menu(t_map *map);
-int						default_color(t_map *map);
 double					percent(int start, int end, int current);
 void					x_rotation(t_map *map);
 void					y_rotation(t_map *map);
